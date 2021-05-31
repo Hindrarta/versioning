@@ -1,0 +1,11 @@
+version: "3.8"
+
+services: 
+  backend:
+    build: .
+    ports:
+      - "8002:3000"
+    volumes: 
+      - .:/app
+    container_name: "dtc-dummy-backend"
+    restart: "always"
