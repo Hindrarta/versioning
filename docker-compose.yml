@@ -3,12 +3,12 @@ version: "3.8"
 services: 
   backend:
     build: .
-	image: node-versioning:${APP_VERSION}
+    image: node-versioning:${APP_VERSION}
     ports:
-      - "8002:3000"
+      - "3000:3000"
     volumes: 
       - .:/app
-	env_file: 
-		- ".env"
+    env_file: 
+      - ".env"
     container_name: "node-versioning"
     restart: "always"
