@@ -1,0 +1,35 @@
+{
+  "name": "dtc_be_dummy",
+  "version": "1.0.0",
+  "description": "DTC Backend dummy data for people counting, vehicle density, and vehicle counting",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hindrarta/versioning.git"
+  },
+  "keywords": [
+    "DTC",
+    "Backend",
+    "Dummy",
+    "Data"
+  ],
+  "author": "Fanny A. Hindrarta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hindrarta/versioning/issues"
+  },
+  "homepage": "https://github.com/Hindrarta/versioning#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
