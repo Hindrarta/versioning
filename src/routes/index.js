@@ -12,17 +12,14 @@ app.use(express.json())
 const token = require('./token')
 app.use('/auth', token)
 
-const pedestrian = require('./pedestrian')
-app.use('/pedestrian', pedestrian)
-
 app.get('/', (req, res) => {
 	res.send({
-		'title':'DTC Backend Dummy Data',
-		'version':process.env.APP_VERSION
+		'title':'Template Node JS Apps',
+		'version':process.env.APP_VERSION,
+		'message':'This is version 1.0.0 of testing'
 	})
 })
 
 module.exports = {
-	token, 
-	pedestrian
+	token
 }

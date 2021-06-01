@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hindrarta/dtc_be_dummy.git"
+    "url": "git+https://github.com/Hindrarta/versioning.git"
   },
   "keywords": [
     "DTC",
@@ -20,9 +20,9 @@
   "author": "Fanny A. Hindrarta",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hindrarta/dtc_be_dummy/issues"
+    "url": "https://github.com/Hindrarta/versioning/issues"
   },
-  "homepage": "https://github.com/Hindrarta/dtc_be_dummy#readme",
+  "homepage": "https://github.com/Hindrarta/versioning#readme",
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
