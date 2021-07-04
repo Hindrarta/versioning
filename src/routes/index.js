@@ -13,10 +13,12 @@ const token = require('./token')
 app.use('/auth', token)
 
 app.get('/', (req, res) => {
+	let date_obj = new Date()
 	res.send({
 		'title':'Template Node JS Apps',
 		'version':process.env.APP_VERSION,
-		'message':'This is version 1.0.0 of testing'
+		'message':`This is version ${process.env.APP_VERSION} of testing`,
+		'datetime':date_obj.toLocaleDateString()
 	})
 })
 
