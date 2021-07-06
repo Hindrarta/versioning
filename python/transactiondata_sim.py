@@ -42,6 +42,32 @@ def saveToJPG(base64Image):
         print(f"error in saving to JPG reason: {e}")
         return None
 
+def test_snapshot():
+    distance, temperature, mask_status, amb_temps, \
+    obj_temps, mask_probs, snapshot_bbox, snapshot_b64, \
+    backlight_cond, processing_time, rfid_id = get_QT_FMD_data(client)
+    # print("data       -->", \
+    #     distance, temperature, mask_status, amb_temps, \
+    #     obj_temps, mask_probs, \
+    #     backlight_cond, processing_time, rfid_id
+    # )
+    # print("img base64 -->", len(snapshot_b64), len(snapshot_bbox))
+    client.set('sim_img_base64', snapshot_b64)
+    print(type(snapshot_b64), len(snapshot_b64))
+
+    # file1 = open("snapshot_b64.txt","w")
+    # file1.write(snapshot_b64)
+    # file1.close()
+
+def read_base64img_file():
+    try:
+        file1 = open("snapshot_b64.txt","r")
+        img = file1.read()
+        file1.close()
+        # print(img)
+        print(type(img), len(img))
+    except Exception as e:
+        print("cannot open file snapshot_b64.txt")
 
 def postAPI():
     distance, temperature, mask_status, amb_temps, \
@@ -94,7 +120,9 @@ def postAPI():
     print(timestamp, body['transactionID'])
 
     database.insert_data_db(body)
-    
+
+test_snapshot()
+read_base64img_file()
 # for i in range(2000):
 #     print(i+1)
 #     print('---------------------------------------------------------')
